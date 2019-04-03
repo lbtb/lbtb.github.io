@@ -1,0 +1,121 @@
+---
+layout: default
+title: Portfolio
+---
+		<script>
+			window.onload = function() { hideVideo() };
+			
+			// When the user scrolls down 50px from the top of the document, show the button
+			window.onscroll = function() { scroll() };
+
+			function scroll()
+			{
+				if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+				{
+					document.getElementById("topButton").style.display = "block";
+				}
+				else
+				{
+					document.getElementById("topButton").style.display = "none";
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function goToTop()
+			{
+				window.scrollTo( { top: 0, behavior: 'smooth' } );
+			}
+			
+			function hideVideo()
+			{
+				var x = document.getElementsByClassName("video");
+				for (i = 0; i != x.length; ++i)
+				{
+					x[i].style.display = "none";
+				}
+			}
+			
+			function showVid(str) 
+			{
+				var x = document.getElementById(str + "_vid");
+				var y = document.getElementById(str + "_button");
+  				if (x.style.display === "none")
+				{
+    					x.style.display = "block";
+					y.innerHTML = "Hide video";
+  				}
+				else
+				{
+    					x.style.display = "none";
+					y.innerHTML = "Show video";
+  				}
+			}
+		</script>
+
+		<button onclick="goToTop()" id="topButton" title="Go to top">Top</button>
+		
+		<div class="portfolio">
+			<h1>Portfolio</h1>
+			<p>Source code for most of these projects is available on GitHub.</p>
+
+			<ul>
+				<li>Personal project: <a href="#TPS">TPS prototype</a></li>
+				<li>Academic projects:
+					<ul class="academic_projects">
+						<li><a href="#Stealth">3D stealth game</a></li>
+						<li><a href="#Adventure">2D adventure game</a></li>
+						<li><a href="#OpenGL">OpenGL project</a></li>
+					</ul>
+				</li>
+				<li>Assignments: <a href="#Arcade3D">3D</a> & <a href="#Arcade2D">2D</a> mini-games</li>
+			</ul>
+			
+			<hr/>
+			
+			<div class="videos">
+				<h4 id="TPS">TPS prototype (2017)</h4>
+				<button id="TPS_button" onclick="showVid('TPS')">Show video</button>
+				<p class="video" id="TPS_vid">
+					<iframe width="768" height="432" src="https://www.youtube-nocookie.com/embed/_" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<br/><span style="color:Red"><b>Caution:</b> Lower your volume.</span> <b>Tools:</b> Unity 4.7.2, C#, Blender, Photoshop (4 weeks)
+				</p>
+			
+				<h4 id="Stealth">3D stealth game (2014)</h4>
+				<button id="Stealth_button" onclick="showVid('Stealth')">Show video</button>
+				<p class="video" id="Stealth_vid">
+					<iframe width="768" height="432" src="https://www.youtube-nocookie.com/embed/_" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<br/><b>Tools:</b> Unity 4.5.5, C#, BitBucket, TortoiseHg (Team of 4)
+				</p>
+				
+				<h4 id="Adventure">2D adventure game (2013)</h4>
+				<button id="Adventure_button" onclick="showVid('Adventure')">Show video</button>
+				<p class="video" id="Adventure_vid">
+					<iframe width="768" height="432" src="https://www.youtube-nocookie.com/embed/_" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<br/><b>Tools:</b> Visual Studio, C#, MonoGame, BitBucket, TortoiseHg, Photoshop (Team of 5)
+				</p>
+				
+				<h4 id="OpenGL">OpenGL project (2013)</h4>
+				<button id="OpenGL_button" onclick="showVid('OpenGL')">Show video</button>
+				<p class="video" id="OpenGL_vid">
+					<iframe width="768" height="432" src="https://www.youtube-nocookie.com/embed/_" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<br/><b>Tools:</b> Visual Studio, C++, OpenGL, Blender, Photoshop
+				</p>
+				
+				<h4 id="Arcade3D">3D mini-game (2013)</h4>
+				<button id="Arcade3D_button" onclick="showVid('Arcade3D')">Show video</button>
+				<p class="video" id="Arcade3D_vid">
+					<iframe width="768" height="432" src="https://www.youtube-nocookie.com/embed/_" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<br/><b>Tools:</b> Visual Studio, C#, MonoGame, Blender, Photoshop
+				</p>
+				
+				<h4 id="Arcade2D">2D mini-game (2013)</h4>
+				<button id="Arcade2D_button" onclick="showVid('Arcade2D')">Show video</button>
+				<p class="video" id="Arcade2D_vid">
+					<iframe width="768" height="432" src="https://www.youtube-nocookie.com/embed/_" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<br/><b>Tools:</b> Visual Studio, C#, MonoGame, Photoshop
+				</p>
+			</div>
+			
+			<p align="right"><span style="color:LightGray; font-size:.8em">updated 190331</span></p>
+			
+		</div>

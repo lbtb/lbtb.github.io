@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+		</head>
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/a">About</a></li>
+	        		<li><a href="/portfolio">Portfolio</a></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/blog/atom.xml" target="_blank">RSS</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			{{ content }}
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+				<!-- <li><a href="mailto:_@gmail.com"><s>email</s></a></li> -->
+	        		<li><a href="https://github.com/_" target="_blank">github.com</a></li>
+				</ul>
+			</footer>
+		</body>
+	</html>
